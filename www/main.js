@@ -19,16 +19,24 @@ $(document).ready(function () {
 
     // Siri message Animation
     $('.siri-message').textillate({
-            loop: true,
+        loop: true,
+        sync: true,
+        in: {
+            effect: "fadeInUp",
             sync: true,
-            in: {
-                effect: "fadeInUp",
-                sync: true,
-            },
-            out: {
-                effect: "fadeOutUp",
-                sync: true,
-            },
+        },
+        out: {
+            effect: "fadeOutUp",
+            sync: true,
+        },
+    });
 
-        });
+    // Mic button click event
+    $('#micBtn').click(function (e) {
+        e.preventDefault();
+        eel.play_assistant_sound();
+        $('#oval').attr("hidden", true);
+        $('#siriWave').attr("hidden", false);
+        siriWave.start();
+    });
 });
