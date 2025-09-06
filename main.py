@@ -4,6 +4,7 @@ import platform
 import subprocess
 
 from engine.features import play_assistant_sound
+from engine.command import take_command, speak_text
 
 eel.init('www')
 
