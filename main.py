@@ -3,7 +3,11 @@ import eel
 import platform
 import subprocess
 
+from engine.features import play_assistant_sound
+
 eel.init('www')
+
+play_assistant_sound()
 
 url = "http://localhost:8000/index.html"
 
